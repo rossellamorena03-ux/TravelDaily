@@ -1,0 +1,113 @@
+.place-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.place-left {
+  flex: 1;
+  text-align: center;
+}
+
+.place-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.place-name {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.place-center {
+  flex: 2;
+}
+
+.place-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.place-info p {
+  margin: 0.4rem 0;
+  color: black;
+}
+
+.place-right {
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.btn-save,
+.btn-visited {
+  width: fit-content;
+  margin-top: 20px;       /* distanza dal contenuto sopra */
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-save {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #0056b3;
+}
+
+.btn-visited {
+  background-color: #28a745;
+  color: white;
+  margin-left: 15px;
+}
+
+.btn-visited:hover {
+  background-color: #1e7e34;
+}
+
+.cover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #007bff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: opacity 0.6s ease;
+  z-index: 2;
+}
+
+/* Quando si rivela */
+.place-container.revealed .cover {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.place-container.revealed {
+  background: white;
+  cursor: default;
+}
