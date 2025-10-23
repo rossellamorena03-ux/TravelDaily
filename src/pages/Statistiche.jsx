@@ -77,3 +77,4 @@ function Statistiche() {
         </div>
     );
 }
+export default Statistiche;
