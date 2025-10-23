@@ -93,3 +93,4 @@ function Preferenze() {
     
   );
 }
+export default Preferenze;
