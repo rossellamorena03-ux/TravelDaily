@@ -10,8 +10,8 @@ app.use(cors({
   origin: ["https://viaggia-ancora.web.app"], // dominio del tuo sito
 }));
 // ⚙️ Inserisci le tue chiavi generate con web-push
-const PUBLIC_VAPID_KEY = "BD6F_U4GZy8cifQMwDWwd-LAKkNelfYs6dnXs61Ojlejz1myc_wh7Z79iOEkZur_E7S6mdocC8PUGTPnEkXvkSc";
-const PRIVATE_VAPID_KEY ="9Q2zKEA2r1PTMNlNG6V0hoxlc88v2Po6BKakbKtbCG4";
+const PUBLIC_VAPID_KEY = import.meta.env.VITE_PUBLIC_VAPID_KEY;
+const PRIVATE_VAPID_KEY =import.meta.env.VITE_PRIVATE_VAPID_KEY;
 
 webpush.setVapidDetails(
   "mailto:rossella@example.com",

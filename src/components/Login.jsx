@@ -52,5 +52,3 @@ function Login() {
     </div>
   );
 }
-
-export default Login;

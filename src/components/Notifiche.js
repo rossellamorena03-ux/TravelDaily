@@ -35,11 +35,9 @@ export async function subscribeUserToPush() {
   let subscription = await registration.pushManager.getSubscription();
 
   if (!subscription) {
-    console.log("Chiave Uint8Array:", urlBase64ToUint8Array("BD6F_U4GZy8cifQMwDWwd-LAKkNelfYs6dnXs61Ojlejz1myc_wh7Z79iOEkZur_E7S6mdocC8PUGTPnEkXvkSc"));
-
     subscription = await registration.pushManager.subscribe({
       userVisibleOnly: true,
-      applicationServerKey: urlBase64ToUint8Array("BD6F_U4GZy8cifQMwDWwd-LAKkNelfYs6dnXs61Ojlejz1myc_wh7Z79iOEkZur_E7S6mdocC8PUGTPnEkXvkSc"),
+      applicationServerKey: urlBase64ToUint8Array(import.meta.env.VITE_PUBLIC_VAPID_KEY),
     });
 
     console.log("✅ Nuova subscription creata!");
@@ -71,4 +69,3 @@ function urlBase64ToUint8Array(base64String) {
   const rawData = window.atob(base64);
   return Uint8Array.from([...rawData].map(char => char.charCodeAt(0)));
 }
-
