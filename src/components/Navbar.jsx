@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebaseConfig";
-import InstallButton from './components/InstallButton.jsx';
+import InstallButton from './InstallButton.jsx';
 import "./Navbar.css";
 
 function Navbar() {
