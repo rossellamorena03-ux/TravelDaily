@@ -90,7 +90,7 @@ function Home() {
   // 🔹 3. Funzione per ottenere una città casuale
   async function getRandomPlace(lat, lon, radiusKm = 10) {
     const username = "rossella.morena";
-    const url = `http://api.geonames.org/findNearbyPlaceNameJSON?lat=${lat}&lng=${lon}&radius=${radiusKm}&maxRows=20&username=${username}`;
+    const url = `https://api.geonames.org/findNearbyPlaceNameJSON?lat=${lat}&lng=${lon}&radius=${radiusKm}&maxRows=20&username=${username}`;
 
     const response = await fetch(url);
     if (!response.ok) throw new Error("Errore nella chiamata GeoNames");
