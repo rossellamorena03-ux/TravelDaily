@@ -93,7 +93,7 @@ function Home() {
     const url = `https://api.geonames.org/findNearbyPlaceNameJSON?lat=${lat}&lng=${lon}&radius=300&maxRows=20&username=${username}`;
 
     // nuova versione con proxy
-    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+    const proxyUrl = `https://api.allorigins.space/get?url=${encodeURIComponent(url)}`;
     
     const response = await fetch(proxyUrl);
     if (!response.ok) throw new Error("Errore nella chiamata GeoNames");
